@@ -1,0 +1,11 @@
+.App1 {
+  text-align: center;
+  align-items: center;
+  background-color: indianred;
+  height: 500px;
+}
+
+.ImageItem {
+  width: 200px;
+  height: 200px;
+}

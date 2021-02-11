@@ -1,0 +1,30 @@
+.iii {
+  background-color: blueviolet;
+  height: 50px;
+  align-items: center;
+  font-size: 1.25em;
+}
+
+.iii a {
+  color: white;
+  margin: 30px 10px 20px 10px;
+}
+
+.iii img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 1200px;
+  top: 5px;
+}
+
+.iii span {
+  font-size: 25px;
+  color: red;
+  position: relative;
+  border: 1px solid wheat;
+  left: 1150px;
+  bottom: 1px;
+  background-color: white;
+  border-radius: 20%;
+}

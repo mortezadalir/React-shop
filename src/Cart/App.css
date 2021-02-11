@@ -1,0 +1,17 @@
+.App1 {
+  text-align: center;
+}
+
+.ImageItem {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  top: 20px;
+}
+
+.titleImage {
+  position: relative;
+  left: 500px;
+  width: 30px;
+  top: 150px;
+}
