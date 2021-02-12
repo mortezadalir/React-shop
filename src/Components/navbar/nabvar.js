@@ -10,9 +10,12 @@ class Navbar extends Component{
     }
 
     render(){
-        return ( <div className={classes.iii}>
-        <a className="active" href="#">Shop</a>
-        <img src={this.state.imageURl} /> <span>{this.props.count}</span> 
+        return ( <div className={classes.Navbar}>
+            <ul>
+                <li onClick={()=>this.props.changeCategury('fruit')}>fruit</li>
+                <li onClick={()=>this.props.changeCategury('cleaning')}>cleaning</li>
+            </ul>
+        
             </div>
           );
     }

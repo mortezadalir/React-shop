@@ -1,24 +1,22 @@
-.iii {
+.Navbar {
   background-color: blueviolet;
   height: 50px;
   align-items: center;
   font-size: 1.25em;
 }
 
-.iii a {
+.Navbar li {
   color: white;
-  margin: 30px 10px 20px 10px;
+  display: inline-block;
+  margin: 10px;
 }
 
-.iii img {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  left: 1200px;
-  top: 5px;
+.Navbar ul {
+  list-style: none;
+  color: black;
 }
 
-.iii span {
+.Navbar span {
   font-size: 25px;
   color: red;
   position: relative;

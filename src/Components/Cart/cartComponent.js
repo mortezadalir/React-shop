@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import classes from './style.css';
 
 
@@ -25,9 +25,6 @@ import classes from './style.css';
 
 
 
-
-
-
       
            return (
            <div className={ styleItem.join(" ")} >
@@ -35,7 +32,7 @@ import classes from './style.css';
                <div >
                <h5>{props.fruitItem.name} </h5>
 
-                   <img className={classes.Image} src={props.fruitItem.imageUrl}  alt="Card image cap"/><br/>
+                   <img className={classes.Image} src={props.fruitItem.imageUrl}  alt=" "/><br/>
                    <span> Price: {props.fruitItem.price}$</span>
                    <button className={classes.Button}
                    onClick={()=> props.click(props.fruitItem)}
