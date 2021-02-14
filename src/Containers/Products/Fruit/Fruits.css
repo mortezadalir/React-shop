@@ -1,0 +1,9 @@
+.Fruits {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 100px;
+}
+.Fruit {
+  margin: 20px;
+}
