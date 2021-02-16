@@ -1,28 +1,28 @@
-.Navbar {
-  background-color: blueviolet;
-  height: 50px;
+.Header {
   align-items: center;
-  font-size: 1.25em;
 }
-
-.Navbar li {
-  color: white;
+.Header ul {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(104, 73, 133);
+  color: azure;
+}
+.Header li {
   display: inline-block;
-  margin: 10px;
+  margin: 15px;
 }
 
-.Navbar ul {
-  list-style: none;
-  color: black;
+.Header a {
+  text-decoration: none;
+  color: azure;
 }
-
-.Navbar span {
-  font-size: 25px;
-  color: red;
+.Header img {
+  background-color: coral;
+  margin-top: 0px;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
   position: relative;
-  border: 1px solid wheat;
-  left: 1150px;
-  bottom: 1px;
-  background-color: white;
-  border-radius: 20%;
+  left: 550px;
+  top: 5px;
 }

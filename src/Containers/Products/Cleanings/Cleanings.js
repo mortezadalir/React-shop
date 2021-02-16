@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import cleaning from './Cleaning/Cleaning';
 import Cleaning from './Cleaning/Cleaning'
 import classes from './Cleanings.css'
 
@@ -37,11 +38,12 @@ class Cleanings extends Component{
         const cleanings=this.state.cleaning.map(cleanings => {
             
             return (
-                <div className={classes.cleanings}>
+                <div className={classes.cleanings}  key={cleanings.id}>
                     <Cleaning 
-              key={cleanings.id}
+             
               name={cleanings.name} 
               price={cleanings.price} 
+              shoped={() => this.props.shoped(cleanings)}
               imageUrl={cleanings.imageUrl}/>
 
                 </div>

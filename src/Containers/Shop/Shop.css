@@ -1,25 +1,12 @@
 .Shop {
   text-align: center;
   align-items: center;
-  background-color: rgb(248, 160, 160);
   width: 100%;
+  margin: 0;
 }
 
 @media (max-width: 500px) {
   .Shop {
     background-color: rgb(189, 166, 166);
   }
-}
-.Header {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(185, 245, 190);
-}
-.Header li {
-  display: inline-block;
-  margin: 15px;
-}
-
-.Header a {
-  text-decoration: none;
 }

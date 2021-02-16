@@ -31,11 +31,12 @@ class Fruits extends Component{
         const fruits=this.state.fruit.map(fruit => {
             
             return (
-                <div className={classes.Fruit}>
+                <div className={classes.Fruit} key={fruit.id}>
                     <Fruit 
-              key={fruit.id}
+              
               name={fruit.name} 
               price={fruit.price} 
+              shoped={() =>this.props.shoped(fruit)}
               imageUrl={fruit.imageUrl}/>
 
                 </div>
