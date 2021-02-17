@@ -11,15 +11,15 @@ class Shop extends Component {
   }
 
  shopHandler(product){
-    this.setState({cart: product});
-    console.log(this.state.cart);
+   const cart=[...this.state.cart, product]
+    this.setState({cart: cart});
     };
 
   render() {
-
+    console.log(this.state.cart);
     return (
       <div  className={classes.Shop}>
-        <Navbar  />
+        <Navbar count={this.state.cart.length }/>
         <Route path="/friut"  render={() => <Fruits shoped={(fruit)=>this.shopHandler(fruit)}/>} />
         <Route path="/cleanings" render={() => <Cleanings shoped={(cleaning) => this.shopHandler(cleaning)}/>}/> 
        
