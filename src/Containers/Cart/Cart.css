@@ -1,0 +1,12 @@
+.Cart {
+  align-items: center;
+}
+
+.Cart tr,
+th,
+td {
+  width: 200px;
+  text-align: center;
+  border: 1px solid black;
+  height: 25px;
+}
