@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import classes from  './Shop.css';
-import Fruits from '../Products/Fruit/Fruits'
-import Cleanings from '../Products/Cleanings/Cleanings'
+import ShowProducts from '../../Containers/Products/ShowProducts'
 import {Route} from 'react-router-dom' 
 import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/SideBar/SideBar';
+import products from '../../Components/Products/Products'
 
 
 
 
 class Shop extends Component {
 
-  state={
-    cart:[],
-    restProduct:[],
-  }
+  state={...products};
 
  shopHandler(product){
    const cart=[...this.state.cart, product]
@@ -22,14 +19,14 @@ class Shop extends Component {
     };
 
   render() {
-    console.log(this.state.cart);
     return (
       <div  className={classes.Shop}>
-        <Navbar count={this.state.cart.length }/>
+        <Navbar />
         <Sidebar />
-        <Route path="/friut"  render={() => <Fruits shoped={(fruit)=>this.shopHandler(fruit)}/>} />
-        <Route path="/cleanings" render={() => <Cleanings shoped={(cleaning) => this.shopHandler(cleaning)}/>}/> 
-       
+        <Route path="/foods_and_dairy" render={() => <ShowProducts products={this.state.food} />} />
+        <Route path="/fruits_and_vegtables" render={() => <ShowProducts products={this.state.fruit} /> } />
+        <Route path="/baverage" render={() => <ShowProducts products={this.state.beverage} />} />
+        <Route path="/household_and_cleanings" render={() => <ShowProducts products={this.state.household} />} />
 
       </div>
     );

@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
-import Fruit from './Fruit/Fruit';
-import classes from './Fruits.css';
-import  Products from '../../../Components/Products/Products';
+import ShowProduct from './ShowProduct/ShowProduct';
+import classes from './ShowProducts.css';
+
 
 
 class Fruits extends Component{
-    state=Products;
+   
 
     render(){
-        const fruits=this.state.food.map(fruit => {
+        console.log(this.props);
+        const fruits=this.props.products.map(fruit => {
             
             return (
                 <div className={classes.Fruit} key={fruit.id}>
-                    <Fruit 
+                    <ShowProduct 
               
               name={fruit.name} 
               price={fruit.price} 
