@@ -1,0 +1,19 @@
+.Sidebar {
+  width: 200px;
+  height: 500px;
+  background-color: cyan;
+  position: relative;
+  bottom: 40px;
+}
+.Sidebar ul {
+  position: relative;
+  right: 10px;
+  top: 50px;
+  list-style-type: none;
+}
+.Sidebar li {
+  text-align: left;
+  width: 200px;
+  font-size: 1.25em;
+  margin: 40px 20px 20px 0;
+}

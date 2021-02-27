@@ -2,40 +2,18 @@ import React, {Component} from 'react'
 import cleaning from './Cleaning/Cleaning';
 import Cleaning from './Cleaning/Cleaning'
 import classes from './Cleanings.css'
+import products from '../../../Components/Products/Products'
+
+const strr='../../../assets';
 
 
 class Cleanings extends Component{
+  
     
-  state={
-    cleaning:[
-      {categury: 'cleaning',
-        id: '1',
-       name: 'shampoo',
-      price:5,
-      imageUrl: require("../../../assets/shampoo.jpg")},
-      { categury: 'cleaning',
-        id:'2',
-      name: 'whitex',
-      price:10,
-      imageUrl: require("../../../assets/whitex.jpg"),
-      },
-      { categury: 'cleaning',
-        id:'3',
-      name: 'detergent',
-      price:7,
-      imageUrl: require("../../../assets/detergent.jpg"),
-      },
-      { categury: 'cleaning',
-        id:'4',
-      name: 'toothbrush',
-      price:3,
-      imageUrl: require("../../../assets/toothbrush.jpg"),
-      },
-    ],
-}
+  state=products;
 
     render(){
-        const cleanings=this.state.cleaning.map(cleanings => {
+        const cleanings=this.state.household.map(cleanings => {
             
             return (
                 <div className={classes.cleanings}  key={cleanings.id}>
