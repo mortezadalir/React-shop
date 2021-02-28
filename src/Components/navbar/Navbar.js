@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import classes from './Navbar.css'
 import Cart from '../../assets/Cart.png'
+import {connect} from 'react-redux'
 
 
 const navbar=(props) =>{
-  console.log(props.count);
+ 
       return(
         <div>
         <header className={classes.Header}>
@@ -13,10 +14,15 @@ const navbar=(props) =>{
             
             <Link to="/friut"  ><li>Fruit</li></Link>
             <Link to="/cleanings"  ><li>Cleaning</li></Link>
-            <img src={Cart} alt="cant show"></img><span>{props.count}</span>
+            <Link to="/cart"><img src={Cart} alt="cant show"></img><span>{props.count}</span></Link>
           </ul>
         </header>
         </div>
     )
 }
-export default navbar;
+const mapStateToProps=state=>{
+  return{
+    count: state.cart.length
+  }
+}
+export default connect(mapStateToProps,null)(navbar);

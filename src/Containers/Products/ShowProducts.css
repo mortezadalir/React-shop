@@ -1,8 +1,12 @@
-.Fruits {
+.ShowProuducts {
   justify-content: center;
   display: flex;
   flex-flow: row wrap;
   margin: 100px;
+  width: 80%;
+  position: relative;
+  bottom: 500px;
+  left: 100px;
 }
 .Fruit {
   margin: 20px;

@@ -10,6 +10,7 @@ const fruit= (props) =>{
             <img src={props.imageUrl} alt="" />
             <h2>Price:  {props.price}$</h2>
             <button onClick={props.shoped}>Buy</button>
+          
             
         </div>
     )
