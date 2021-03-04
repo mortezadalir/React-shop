@@ -1,12 +1,13 @@
 .Shop {
+  position: relative;
   text-align: center;
   align-items: center;
   width: 100%;
   margin: 0;
+  font-family: Shippori;
 }
-
-@media (max-width: 500px) {
-  .Shop {
-    background-color: rgb(189, 166, 166);
-  }
+.Slider {
+  position: absolute;
+  top: 50px;
+  right: 200px;
 }

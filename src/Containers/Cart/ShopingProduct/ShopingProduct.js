@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './ShopingProduct.css'
+import Button from '../../../Components/UI/Button/Button' 
 
 
 
@@ -11,6 +12,8 @@ const shopingProduct= (props) =>{
             <img src={props.product.imageUrl} />
             
             <h3> quantity: {props.product.quantity}</h3>
+            <button onClick={props.shoped}>hiiiii</button>
+            <Button shoped={props.shoped}> +</Button> 
 
         </div>
 

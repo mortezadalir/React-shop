@@ -1,0 +1,54 @@
+.Slider {
+  position: relative;
+  text-align: center;
+  width: 800px;
+  height: 500px;
+  margin: 50px;
+  border-radius: 5%;
+
+  background-color: rgb(219, 219, 217);
+}
+
+.Slider img {
+  height: 450px;
+  width: 90%;
+}
+.Slider Dot {
+  position: absolute;
+  right: 400px;
+}
+.Span {
+  cursor: pointer;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px 4px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  font-size: 3em;
+  color: white;
+}
+.Prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 3em;
+  color: white;
+}
+.Next:hover,
+.Prev:hover {
+  color: rgb(59, 58, 58);
+}
+
+.Span:hover {
+  background-color: blanchedalmond;
+}

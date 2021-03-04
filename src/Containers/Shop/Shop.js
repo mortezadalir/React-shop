@@ -6,6 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/SideBar/SideBar';
 import products from '../../Components/Products/Products';
 import Cart  from '../Cart/Cart'
+import Slider from '../../Components/Slider/Slider'
 
 
 
@@ -26,6 +27,9 @@ class Shop extends Component {
       <div  className={classes.Shop}>
         <Navbar />
         <Sidebar />
+        <div className={classes.Slider} >
+        <Route path='/'  exact component={Slider} />
+        </div>
         <Route path="/cart" component={Cart} />
         <Route path="/foods_and_dairy" render={() => <ShowProducts products={this.state.food} />} />
         <Route path="/fruits_and_vegtables" render={() => <ShowProducts products={this.state.fruit} /> } />

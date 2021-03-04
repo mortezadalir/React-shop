@@ -18,14 +18,19 @@
 }
 
 .Fruit button {
-  padding: 8px 12px;
+  padding: 6px 10px;
   color: white;
-  background-color: rgb(76, 76, 248);
+  background-color: rgb(81, 81, 192);
   font-weight: bold;
+  font-size: 1.25em;
   border: none;
   border-radius: 10%;
+  outline: none;
 }
 
 .Fruit button:hover {
   background-color: blue;
+}
+.Fruit button:active {
+  background-color: blueviolet;
 }

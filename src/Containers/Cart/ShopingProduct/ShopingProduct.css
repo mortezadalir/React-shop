@@ -1,7 +1,19 @@
+.ShopingProduct {
+  text-align: left;
+}
+
 .ShopingProduct img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   left: 50px;
   top: 50px;
+}
+
+.ShopingProduct h2,
+h4,
+h3 {
+  position: relative;
+  left: 225px;
+  top: 20px;
 }
