@@ -7,28 +7,32 @@ import classes from './Cart.css'
 
 class Cart extends Component {
 
-    shopedHand = () =>{
-        console.log('hello');
-    }
-
     render(){
+        
         const shopingCart=this.props.cart.map(product =>{
             return(
-                <div className={classes.Cart}
-                key={product.id}>
+                <div 
+                    key={product.id}>
                     <ShopingProduct
-                    
-                     className={classes.Cart} 
                      shoped={()=> this.props.onShopHandler(product)}
+                     unshoped={()=> this.props.onDecrementhandler(product)}
                      product={product} />
-                     
+                    
                 </div>
                 
             )
         })
+        const warnAboutCart= (
+            <div className={classes.Text}>
+                <h3> You have nothing in the shoping cart,</h3><br/><h3> Please got to
+                     <span style={{color: 'red'}}> Sidebar</span> and choose any category you want 
+                    and buy products you need</h3> 
+            </div>
+        )
         return(
-            <div >
+            <div className={classes.Cart}>
                 {shopingCart}
+                {shopingCart.length>0 ? <button className={classes.Button} >Shoping Now</button>:warnAboutCart}
             </div>
         )
     }
@@ -42,7 +46,8 @@ const mapStatetoProps = state =>{
 
 const mapDispatchToProps = dispatch =>{
     return{
-        onShopHandler: (product) => dispatch({type: 'AddToCart', product:product})
+        onShopHandler: (product) => dispatch({type: 'AddToCart', product:product}),
+        onDecrementhandler:(product) => dispatch({type:'SubOfCart',product:product}),
     }
 }
 

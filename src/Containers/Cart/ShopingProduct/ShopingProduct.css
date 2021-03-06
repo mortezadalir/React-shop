@@ -1,5 +1,13 @@
 .ShopingProduct {
+  position: relative;
   text-align: left;
+  width: 80%;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 15px 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 4px #aaaaaa;
 }
 
 .ShopingProduct img {
@@ -16,4 +24,12 @@ h3 {
   position: relative;
   left: 225px;
   top: 20px;
+}
+
+.Button {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row wrap;
 }

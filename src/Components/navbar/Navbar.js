@@ -4,7 +4,7 @@ import classes from './Navbar.css'
 
 import {connect} from 'react-redux'
 import Cart from '../../assets/cart-outline.svg';
-import Logo from '../../assets/images.jpg';
+
 
 
 
@@ -18,7 +18,6 @@ const navbar=(props) =>{
           <ul>
             
             <Link to="/"  ><li><h2> Home</h2></li></Link>
-            <Link to="/cleanings" ><li>Cleaning</li></Link>
             <Link to="/cart"><img src={Cart} alt="cant show"></img><span>{props.count}</span></Link>
           </ul>
         </header>

@@ -18,6 +18,19 @@ const reducer =(state=initialState,action) =>{
                 ...updateState
             }
         }
+        case ("SubOfCart"): 
+           const indexForSub = state.cart.findIndex(prod => prod.id === action.product.id);
+           const updateStateTwo={...state, cart:[...state.cart]};
+           updateStateTwo.cart[indexForSub].quantity-=1;
+           if (updateStateTwo.cart[indexForSub].quantity===0){
+            updateStateTwo.cart.splice(indexForSub,1);
+           }
+           return{
+               ...updateStateTwo
+           }
+       
+    
+  
         default:
             return state;
      }

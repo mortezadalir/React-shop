@@ -9,25 +9,25 @@ class Fruits extends Component{
    
 
     render(){
-     console.log(this.props.cart);
-        
-        const fruits=this.props.products.map(fruit => {
+        console.log(this.props.cart);
+        const products=this.props.products.map(product => {
             
+
             return (
-                <div className={classes.Fruit} key={fruit.id}>
-                    <ShowProduct 
+                <div className={classes.Fruit} key={product.id}>
+                  <ShowProduct 
               
-              name={fruit.name} 
-              price={fruit.price} 
-              shoped={()=>this.props.onShopHandler(fruit)}
-              imageUrl={fruit.imageUrl}/>
+              name={product.name} 
+              price={product.price} 
+              shoped={()=>this.props.onIncrementHandler(product)}
+              imageUrl={product.imageUrl}/>
 
                 </div>
             ) 
         });
         return(
             <div className={classes.ShowProuducts}>
-                {fruits}
+                {products}
                 
             </div>
         )
@@ -41,7 +41,8 @@ const mapStateToProps = state =>{
   
   const mapDispatchToProps= dispatch => {
     return {
-      onShopHandler:(product) => dispatch({type:'AddToCart',product:product})
+      onIncrementHandler:(product) => dispatch({type:'AddToCart',product:product}),
+      
     }
   }
   
